@@ -83,7 +83,7 @@ public class BaseballElimination {
 
     // number of remaining games between team1 and team2
     public int against(String team1, String team2) {
-        if (names.indexOf(team1) == -1 || names.indexOf(team1) == -1)
+        if (names.indexOf(team1) == -1 || names.indexOf(team2) == -1)
             throw new IllegalArgumentException();
         return game[names.indexOf(team1)][names.indexOf(team2)];
     }
@@ -91,24 +91,19 @@ public class BaseballElimination {
     // is given team eliminated?
 
     public boolean isEliminated(String team) {
-        if (names.indexOf(team) == -1)
+        int index = names.indexOf(team);
+        if (index == -1)
             throw new IllegalArgumentException();
         queue = new Queue<>();
-        int index = names.indexOf(team);
-        if (index != -1) {
-            if (trivialSolution(index)) {
-                return true;
-            }
-            else {
-                FordFulkerson graph2 = nontrivialSolution(index);
-                if (toTCapacity != graph2.value()) {
-                    return true;
-                }
-                return false;
-            }
+        if (trivialSolution(index)) {
+            return true;
         }
         else {
-            throw new java.lang.IllegalArgumentException();
+            FordFulkerson graph2 = nontrivialSolution(index);
+            if (toTCapacity != graph2.value()) {
+                return true;
+            }
+            return false;
         }
     }
 
