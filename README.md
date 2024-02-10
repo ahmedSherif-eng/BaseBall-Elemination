@@ -3,6 +3,7 @@
 The Baseball Elimination problem is an application of the Maximum Flow Problem.
 In `Baseball.java`, I provide a solution to the problem as specified by `Princeton's Coursera Specification:` https://coursera.cs.princeton.edu/algs4/assignments/baseball/specification.php
 
+[![wakatime](https://wakatime.com/badge/user/1573cfda-f106-4c1b-87c2-64cdbd982d7a/project/018d845a-3fdb-4929-a71f-c1dfc86f166b.svg)](https://wakatime.com/badge/user/1573cfda-f106-4c1b-87c2-64cdbd982d7a/project/018d845a-3fdb-4929-a71f-c1dfc86f166b)
 ## Problem Description:
 - There are n teams competing in a league. At each point during the season, each team has some number of wins, losses, and remaining games to play.
 
